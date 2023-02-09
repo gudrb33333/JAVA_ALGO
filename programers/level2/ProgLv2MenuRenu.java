@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashSet;
 
-import algo.ProgLv2MenuRenu.LinkedList.Node;
+import level2.ProgLv2MenuRenu.LinkedList.Node;
 
 public class ProgLv2MenuRenu {
 

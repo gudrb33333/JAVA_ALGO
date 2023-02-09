@@ -3,7 +3,7 @@ package level2;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import algo.ProgLv2Spicy.LinkedList.Node;
+import level2.ProgLv2Spicy.LinkedList.Node;
 
 public class ProgLv2Spicy {
 	
@@ -31,29 +31,29 @@ public class ProgLv2Spicy {
 			head = crnt = null;
 		}
 		
-		// ³ëµå °Ë»ö
+		// ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½
 		public Node<E> search(E obj, Comparator<? super E> c) {
-			Node<E> ptr = head;							// ÇöÀç ½ºÄµÁßÀÎ  ³ëµå
+			Node<E> ptr = head;							// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½
 
 			while (ptr != null) {
-				if (c.compare(obj, ptr.data) == 0) {	// °Ë»ö ¼º°ø
+				if (c.compare(obj, ptr.data) == 0) {	// ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½
 					crnt = ptr;
 					//System.out.println(ptr.data);
 					return ptr;
 				}		
-				ptr = ptr.next;							// ´ÙÀ½ ³ëµå¸¦ ¼±ÅÃ
+				ptr = ptr.next;							// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½å¸¦ ï¿½ï¿½ï¿½ï¿½
 			}
-			return null;								// °Ë»ö ½ÇÆÐ
+			return null;								// ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½
 		}
 		
-		// ¸Ó¸®¿¡ ³ëµå »ðÀÔ
+		// ï¿½Ó¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		public void addFirst(E obj) {
 			if(head == null) {
-				Node<E> ptr = head;						// »ðÀÔ ÀüÀÇ ¸Ó¸® ³ëµå
+				Node<E> ptr = head;						// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ó¸ï¿½ ï¿½ï¿½ï¿½
 				this.size++;
 				head = crnt = new Node<E>(obj, null, ptr);
 			}else {
-				Node<E> ptr = head;						// »ðÀÔ ÀüÀÇ ¸Ó¸® ³ëµå
+				Node<E> ptr = head;						// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ó¸ï¿½ ï¿½ï¿½ï¿½
 				this.size++;
 				head = crnt = ptr.prev= new Node<E>(obj, null, ptr);
 			}
@@ -91,7 +91,7 @@ public class ProgLv2Spicy {
 			return null;
 		}
 		
-		// ¸ðµç ³ëµå¸¦ Ãâ·Â
+		// ï¿½ï¿½ï¿½ ï¿½ï¿½å¸¦ ï¿½ï¿½ï¿½
 		public void dump() {
 			Node<E> ptr = head;
 
